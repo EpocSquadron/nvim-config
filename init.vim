@@ -105,8 +105,9 @@ nmap <Leader>ep :tabedit ~/.config/nvim/plugins.vim<cr>
 " Simple highlight removal
 nmap <Leader><space> :nohlsearch<cr>
 
-" Easier binding for tag search through CtrlP
-" nmap <C-R> :CtrlPBufTag<cr>
+" Map our muscle memory finding things to fzy
+nnoremap <C-p> :FuzzyOpen<CR>
+nnoremap <C-r> :FuzzyGrep<CR>
 
 " Easier tag searching
 nmap <Leader>f :tag<space>

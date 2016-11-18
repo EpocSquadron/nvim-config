@@ -15,6 +15,7 @@ Plug 'tpope/vim-surround'                " Easy manipulation of quotes, tags and
 Plug 'godlygeek/tabular'                 " Align things around a delimiter, like = in a block of text
 Plug 'junegunn/goyo.vim'                 " Distraction-free mode toggling
 Plug 'machakann/vim-highlightedyank'     " Highlight selection that was just yanked, for visual confirmation
+Plug 'cloudhead/neovim-fuzzy'            " Fuzzy finder using fzy (instead of CtrlP)
 
 " Add plugins to &runtimepath
 call plug#end()
