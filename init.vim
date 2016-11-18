@@ -65,44 +65,24 @@ au FileType crontab set nobackup nowritebackup
 set list 
 set listchars=space:·,tab:\|\ ,eol:¬
 
-"--------------- Linters -----------------"
+"--------------- NerdTree -----------------"
 
-" How should Syntastic display errors?
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+" Easier toggle for nerdtree
+nmap <Leader>t :NERDTreeToggle<cr>
 
-" Set preferred checkers
-let g:syntastic_aggregate_errors    = 1
-let g:syntastic_php_checkers        = ['php', 'phpcs', 'phpmd']
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_python_checkers     = ['pylint']
-let g:syntastic_scss_checkers       = ['scss-lint']
+augroup nerdtree
 
+    " Clear previously applied autocmds
+    autocmd!
 
+    " Open nerdtree on starutp when no files specified
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" Left here in case we need it in the future, but both
-" scss-lint and eslint check for their config files
-" automatically.
+    " Close nvim when the only window open is nerdtree
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Helper for finding linter specific config files
-" function! FindConfig(prefix, what, where)
-"     let cfg = findfile(a:what, escape(a:where, ' ') . ';')
-"     return cfg !=# '' ? ' ' . a:prefix . ' ' . shellescape(cfg) : ''
-" endfunction
-" 
-" augroup syntasticstuff
-"     " Clear previous when reloading this config file
-"     autocmd!
-" 
-"     " All of these are basically for looking up from current directory
-"     " until we find a config file for the linter, so the right rules
-"     " can be applied.
-"     autocmd FileType scss let b:syntastic_scss_scss-lint_args =
-"         \ get(g:, 'syntastic_scss_scss-lint_args', '') .
-"         \ FindConfig('-c', '.scss-lint.yml', expand('<afile>:p:h', 1))
-" augroup END
-
+augroup END
 "---------------- Mappings -----------------"
 
 " Use a more ergonomic leader for custom mappings
@@ -114,9 +94,6 @@ nmap <Leader>ep :tabedit ~/.config/nvim/plugins.vim<cr>
 
 " Simple highlight removal
 nmap <Leader><space> :nohlsearch<cr>
-
-" Easier toggle for nerdtree
-nmap <Leader>t :NERDTreeToggle<cr>
 
 " Easier binding for tag search through CtrlP
 nmap <C-R> :CtrlPBufTag<cr>
