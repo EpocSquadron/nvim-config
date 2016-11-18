@@ -65,6 +65,16 @@ au FileType crontab set nobackup nowritebackup
 set list 
 set listchars=space:·,tab:\|\ ,eol:¬
 
+"--------------- Esearch -----------------"
+
+let g:esearch = {
+  \ 'adapter':    'rg',
+  \ 'backend':    'nvim',
+  \ 'out':        'win',
+  \ 'batch_size': 1000,
+  \ 'use':        ['visual', 'hlsearch', 'last'],
+  \}
+
 "--------------- NerdTree -----------------"
 
 " Easier toggle for nerdtree
@@ -96,7 +106,7 @@ nmap <Leader>ep :tabedit ~/.config/nvim/plugins.vim<cr>
 nmap <Leader><space> :nohlsearch<cr>
 
 " Easier binding for tag search through CtrlP
-nmap <C-R> :CtrlPBufTag<cr>
+" nmap <C-R> :CtrlPBufTag<cr>
 
 " Easier tag searching
 nmap <Leader>f :tag<space>
@@ -150,3 +160,4 @@ let g:multi_cursor_quit_key = '<Esc>'
 "   - Capitalize <samething> to make it available between files.
 " - Use `gt` to go to next tab, `gT` to go to previous
 " - Use `+y` to yank to the system clipboard
+" - Use `<Leader>ff` to search directory for files containing a string
