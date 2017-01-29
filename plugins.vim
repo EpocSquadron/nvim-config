@@ -7,6 +7,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'       " Git status in nerdtree
 Plug 'morhetz/gruvbox'                   " Nice colorscheme
 Plug 'eugen0329/vim-esearch'             " Search all files with Ag
 Plug 'airblade/vim-gitgutter'            " Git status by line
+Plug 'lambdalisue/vim-gita'              " Ability to interact with git within nvim
+Plug 'delimitMate.vim'                   " Autocompletes parens, etc in insert mode like subl
 Plug 'terryma/vim-multiple-cursors'      " Multiple cursors like Sublime
 Plug 'scrooloose/nerdcommenter'          " Easier commenting/uncommenting
 Plug 'neomake/neomake'                   " Automatic linting for many languages
