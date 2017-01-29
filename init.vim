@@ -48,6 +48,9 @@ set inccommand=nosplit      " Preview the result of commands while typing them.
 set backupdir=~/.config/nvim/backup//
 set directory=~/.config/nvim/swap//
 
+" Use a more ergonomic leader for custom mappings
+let mapleader=';'
+
 "--------------- Theming -------------------"
 
 " Let airline know we have powerline font installed
@@ -102,9 +105,6 @@ augroup nerdtree
 
 augroup END
 "---------------- Mappings -----------------"
-
-" Use a more ergonomic leader for custom mappings
-let mapleader=';'
 
 " easily access vimrc for editing in new tab
 nmap <Leader>ec :tabedit ~/.config/nvim/init.vim<cr>
