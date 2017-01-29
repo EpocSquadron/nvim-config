@@ -141,6 +141,7 @@ augroup allthethings
 
     " Automatically reload this file on save
     autocmd BufWritePost init.vim source %
+    autocmd BufWritePost plugins.vim source %
 augroup END
 
 "------------ Multiple Cursors --------------"
