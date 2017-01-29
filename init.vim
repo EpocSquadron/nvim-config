@@ -54,11 +54,17 @@ set directory=~/.config/nvim/swap//
 let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
 
+" Use tabbar for buffers when only one tab
+let g:airline#extensions#tabline#enabled = 1
+
 " Syntax highlighting
 colorscheme gruvbox
 
 " Let us have real color
 set termguicolors
+
+" Always have tabline showing or it won't draw pretty
+set showtabline=2
 
 " Crontab needs to be edited in place.
 au FileType crontab set nobackup nowritebackup
