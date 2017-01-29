@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'           " Native powerline-font status bar
 Plug 'scrooloose/nerdtree'               " Togglable file explorer sidebar
+Plug 'mbbill/undotree'                   " Interactive navigation of undo history
 Plug 'Xuyuanp/nerdtree-git-plugin'       " Git status in nerdtree
 Plug 'morhetz/gruvbox'                   " Nice colorscheme
 Plug 'eugen0329/vim-esearch'             " Search all files with Ag

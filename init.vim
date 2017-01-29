@@ -120,6 +120,9 @@ nnoremap <C-r> :FuzzyGrep<CR>
 " Easier tag searching
 nmap <Leader>f :tag<space>
 
+" Easy access to undotree
+nnoremap <Leader>u :UndotreeToggle<CR>
+
 "------------ Split Management -------------"
 
 " Remap Ctrl-w+h/j/k/l to Ctrl+h/j/k/l
