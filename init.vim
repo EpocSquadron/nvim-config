@@ -139,11 +139,6 @@ augroup allthethings
     " Clear previously applied autocmds
     autocmd!
 
-    " Use relative line numbers for normal mode,
-    " absolute in insert for calulation ergonomics
-    autocmd InsertEnter * :set number
-    autocmd InsertLeave * :set relativenumber
-
     " Automatically reload this file on save
     autocmd BufWritePost init.vim source %
 augroup END
