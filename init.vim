@@ -66,6 +66,10 @@ colorscheme gruvbox
 " Let us have real color
 set termguicolors
 
+" Set cursor in terminals to red for easy identification
+" of what mode we're in.
+highlight TermCursor ctermfg=red guifg=red
+
 " Always have tabline showing or it won't draw pretty
 set showtabline=2
 
@@ -110,18 +114,24 @@ augroup END
 nmap <Leader>ec :tabedit ~/.config/nvim/init.vim<cr>
 nmap <Leader>ep :tabedit ~/.config/nvim/plugins.vim<cr>
 
-" Simple highlight removal
-nmap <Leader><space> :nohlsearch<cr>
-
 " Map our muscle memory finding things to fzy
 nnoremap <C-p> :FuzzyOpen<CR>
 nnoremap <C-r> :FuzzyGrep<CR>
+
+" Move the current line up and down like in subl/atom
+noremap <C-S-Up> :m -2<CR>
+noremap <C-S-k> :m -2<CR>
+noremap <C-S-Down> :m +1<CR>
+noremap <C-S-j> :m +1<CR>
 
 " Easier tag searching
 nmap <Leader>f :tag<space>
 
 " Easy access to undotree
 nnoremap <Leader>u :UndotreeToggle<CR>
+
+" Easier escaping from terminal mode
+tnoremap <Leader><ESC> <C-\><C-n>
 
 "------------ Split Management -------------"
 
@@ -145,6 +155,9 @@ augroup allthethings
     " Automatically reload this file on save
     autocmd BufWritePost init.vim source %
     autocmd BufWritePost plugins.vim source %
+
+    " Automatically enter insert mode when switching to a term pane
+    autocmd BufEnter * if &buftype == 'terminal' | :startinsert | endif
 augroup END
 
 "------------ Multiple Cursors --------------"
