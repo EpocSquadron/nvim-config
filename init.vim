@@ -177,3 +177,13 @@ let g:multi_cursor_prev_key = '<C-N>'
 let g:multi_cursor_skip_key = '<C-x>'
 let g:multi_cursor_quit_key = '<Esc>'
 
+"----------- Incsearch ---------------"
+
+" Automatically remove highlight when done searching
+let g:incsearch#auto_nohlsearch = 1
+
+" Bind to the regular search keys
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
