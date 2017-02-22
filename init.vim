@@ -132,14 +132,18 @@ nnoremap <Leader>u :UndotreeToggle<CR>
 
 " Easier escaping from terminal mode
 tnoremap <Leader><ESC> <C-\><C-n>
+tnoremap <C-j> <C-\><C-n><C-w><C-j>
+tnoremap <C-k> <C-\><C-n><C-w><C-k>
+tnoremap <C-l> <C-\><C-n><C-w><C-l>
+tnoremap <C-h> <C-\><C-n><C-w><C-h>
 
 "------------ Split Management -------------"
 
 " Remap Ctrl-w+h/j/k/l to Ctrl+h/j/k/l
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
 
 " Open new splits more naturally in bottom/right
 set splitbelow
