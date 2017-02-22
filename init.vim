@@ -162,6 +162,7 @@ augroup allthethings
 
     " Automatically enter insert mode when switching to a term pane
     autocmd BufEnter * if &buftype == 'terminal' | :startinsert | endif
+    autocmd BufEnter * if &buftype == 'terminal' | :set nolist | endif
 augroup END
 
 "------------ Multiple Cursors --------------"
