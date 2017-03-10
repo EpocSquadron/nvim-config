@@ -20,7 +20,7 @@ Plug 'godlygeek/tabular'                 " Align things around a delimiter, like
 Plug 'junegunn/goyo.vim'                 " Distraction-free mode toggling
 Plug 'machakann/vim-highlightedyank'     " Highlight selection that was just yanked, for visual confirmation
 Plug 'cloudhead/neovim-fuzzy'            " Fuzzy finder using fzy (instead of CtrlP)
-Plug 'haya14busa/incsearch.vim'          " Better incremental search/replace
+Plug 'junegunn/vim-slash'                " QoL improvements to search
 Plug 'posva/vim-vue'                     " Vue.js syntax highlighting
 Plug 'ap/vim-css-color'                  " Color preview for hex codes etc
 
