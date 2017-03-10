@@ -77,12 +77,31 @@ highlight TermCursor ctermfg=red guifg=red
 " Always have tabline showing or it won't draw pretty
 set showtabline=2
 
+" Need extra echo area space for echodoc, and we already
+" show the mode in the statusbar.
+set noshowmode
+
 " Crontab needs to be edited in place.
 au FileType crontab set nobackup nowritebackup
 
 " Show invisibles
 set list 
 set listchars=space:·,tab:\|\ ,eol:¬
+
+"--------------- Deoplete ----------------"
+
+" Start deoplete.
+let g:deoplete#enable_at_startup = 1
+
+let g:tern_request_timeout = 1
+let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
+
+"Add extra filetypes
+let g:tern#filetypes = [
+                \ 'jsx',
+                \ 'javascript.jsx',
+                \ 'vue',
+                \ ]
 
 "--------------- Esearch -----------------"
 

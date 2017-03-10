@@ -12,9 +12,13 @@ Plug 'lambdalisue/vim-gita'              " Ability to interact with git within n
 Plug 'delimitMate.vim'                   " Autocompletes parens, etc in insert mode like subl
 Plug 'terryma/vim-multiple-cursors'      " Multiple cursors like Sublime
 Plug 'scrooloose/nerdcommenter'          " Easier commenting/uncommenting
-Plug 'neomake/neomake'                   " Automatic linting for many languages
-Plug 'rust-lang/rust.vim'                " Rust syntax, linting, and more
-Plug 'cespare/vim-toml'                  " Toml syntax highlighting
+Plug 'shougo/deoplete.nvim'              " Async autocompletion
+Plug 'carlitux/deoplete-ternjs', {
+            \ 'do': 'npm install -g tern'
+            \ }
+Plug 'othree/jspc.vim'                   " JS parameter autocompletion
+Plug 'ervandew/supertab'                 " Use tab for autocomplete in insert mode
+Plug 'shougo/echodoc'                    " Show signatures of autocompletes
 Plug 'tpope/vim-surround'                " Easy manipulation of quotes, tags and other delimiters
 Plug 'godlygeek/tabular'                 " Align things around a delimiter, like = in a block of text
 Plug 'junegunn/goyo.vim'                 " Distraction-free mode toggling
