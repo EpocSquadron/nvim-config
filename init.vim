@@ -48,6 +48,10 @@ set inccommand=nosplit      " Preview the result of commands while typing them.
 set backupdir=~/.config/nvim/backup//
 set directory=~/.config/nvim/swap//
 
+" Enable persistent undo so that undo history persists across vim sessions
+set undofile
+set undodir=~/.config/nvim/undo
+
 " Use a more ergonomic leader for custom mappings
 let mapleader=';'
 
@@ -128,7 +132,7 @@ noremap <C-S-j> :m +1<CR>
 nmap <Leader>f :tag<space>
 
 " Easy access to undotree
-nnoremap <Leader>u :UndotreeToggle<CR>
+nnoremap <Leader>u :MundoToggle<CR>
 
 " Easier escaping from terminal mode
 tnoremap <Leader><ESC> <C-\><C-n>
