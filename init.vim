@@ -118,6 +118,12 @@ let g:esearch = {
 " Easier toggle for nerdtree
 nmap <Leader>t :NERDTreeToggle<cr>
 
+" Disable help text and bookmark title
+let g:NERDTreeMinimalUI = 1
+
+" Show hidden files in NERDTree
+let g:NERDTreeShowHidden = 1
+
 augroup nerdtree
 
     " Clear previously applied autocmds
