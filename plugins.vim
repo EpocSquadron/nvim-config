@@ -1,19 +1,20 @@
 " Store plugins in local config dir
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'vim-airline/vim-airline'           " Native powerline-font status bar
-Plug 'scrooloose/nerdtree'               " Togglable file explorer sidebar
-Plug 'simnalamburt/vim-mundo'            " Interactive navigation of undo history
-Plug 'Xuyuanp/nerdtree-git-plugin'       " Git status in nerdtree
+Plug 'vim-airline/vim-airline'            "  Native powerline-font status bar
+Plug 'scrooloose/nerdtree'                "  Togglable file explorer sidebar
+Plug 'simnalamburt/vim-mundo'             "  Interactive navigation of undo history
+Plug 'Xuyuanp/nerdtree-git-plugin'        "  Git status in nerdtree
 Plug 'ryanoasis/vim-devicons'             "  Nice filetype icons like in Atom
-Plug 'morhetz/gruvbox'                   " Nice colorscheme
-Plug 'eugen0329/vim-esearch'             " Search all files with Ag
-Plug 'airblade/vim-gitgutter'            " Git status by line
-Plug 'lambdalisue/vim-gita'              " Ability to interact with git within nvim
-Plug 'delimitMate.vim'                   " Autocompletes parens, etc in insert mode like subl
-Plug 'terryma/vim-multiple-cursors'      " Multiple cursors like Sublime
-Plug 'scrooloose/nerdcommenter'          " Easier commenting/uncommenting
-Plug 'shougo/deoplete.nvim'              " Async autocompletion
+Plug 'morhetz/gruvbox'                    "  Nice colorscheme
+Plug 'kristijanhusak/vim-hybrid-material' "  Another one
+Plug 'eugen0329/vim-esearch'              "  Search all files with Ag
+Plug 'airblade/vim-gitgutter'             "  Git status by line
+Plug 'lambdalisue/vim-gita'               "  Ability to interact with git within nvim
+Plug 'delimitMate.vim'                    "  Autocompletes parens, etc in insert mode like subl
+Plug 'terryma/vim-multiple-cursors'       "  Multiple cursors like Sublime
+Plug 'scrooloose/nerdcommenter'           "  Easier commenting/uncommenting
+Plug 'shougo/deoplete.nvim'               "  Async autocompletion
 Plug 'carlitux/deoplete-ternjs', {
             \ 'do': 'npm install -g tern'
             \ }
