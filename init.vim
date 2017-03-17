@@ -166,6 +166,11 @@ tnoremap <C-k> <C-\><C-n><C-w><C-k>
 tnoremap <C-l> <C-\><C-n><C-w><C-l>
 tnoremap <C-h> <C-\><C-n><C-w><C-h>
 
+" ----------- Distraction Free Mode ------- "
+
+" Easy access to Goyo
+nmap <Leader>g :Goyo<CR>
+
 "------------ Split Management -------------"
 
 " Remap Ctrl-w+h/j/k/l to Ctrl+h/j/k/l
