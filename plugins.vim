@@ -22,6 +22,7 @@ Plug 'shougo/echodoc'                    " Show signatures of autocompletes
 Plug 'tpope/vim-surround'                " Easy manipulation of quotes, tags and other delimiters
 Plug 'godlygeek/tabular'                 " Align things around a delimiter, like = in a block of text
 Plug 'junegunn/goyo.vim'                 " Distraction-free mode toggling
+Plug 'junegunn/limelight.vim'            " Hyper-focus by fading everything in the file but what you're working on
 Plug 'machakann/vim-highlightedyank'     " Highlight selection that was just yanked, for visual confirmation
 Plug 'cloudhead/neovim-fuzzy'            " Fuzzy finder using fzy (instead of CtrlP)
 Plug 'junegunn/vim-slash'                " QoL improvements to search
