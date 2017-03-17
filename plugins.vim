@@ -25,6 +25,7 @@ Plug 'junegunn/goyo.vim'                 " Distraction-free mode toggling
 Plug 'junegunn/limelight.vim'            " Hyper-focus by fading everything in the file but what you're working on
 Plug 'machakann/vim-highlightedyank'     " Highlight selection that was just yanked, for visual confirmation
 Plug 'cloudhead/neovim-fuzzy'            " Fuzzy finder using fzy (instead of CtrlP)
+Plug 'w0rp/ale'                          " Automatic linting for many languages
 Plug 'junegunn/vim-slash'                " QoL improvements to search
 
 " ======= Syntax Highligters =========== "
