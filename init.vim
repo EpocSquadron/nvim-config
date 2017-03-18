@@ -64,6 +64,9 @@ let g:airline_theme='gruvbox'
 " Use tabbar for buffers when only one tab
 let g:airline#extensions#tabline#enabled = 1
 
+" We're using gnome-terminal, so we can haz italics
+let g:gruvbox_italic=1
+
 " Syntax highlighting
 colorscheme gruvbox
 
@@ -87,6 +90,9 @@ au FileType crontab set nobackup nowritebackup
 " Show invisibles
 set list 
 set listchars=space:·,tab:\|\ ,eol:¬
+
+" Nicer vertical separator
+set fillchars+=vert:\ 
 
 "--------------- Deoplete ----------------"
 
@@ -123,6 +129,19 @@ let g:NERDTreeMinimalUI = 1
 
 " Show hidden files in NERDTree
 let g:NERDTreeShowHidden = 1
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "",
+    \ "Staged"    : "",
+    \ "Untracked" : "",
+    \ "Renamed"   : "",
+    \ "Unmerged"  : "",
+    \ "Deleted"   : "",
+    \ "Dirty"     : " ",
+    \ "Clean"     : "",
+    \ 'Ignored'   : '',
+    \ "Unknown"   : ""
+    \ }
 
 augroup nerdtree
 
