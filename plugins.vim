@@ -10,7 +10,7 @@ Plug 'morhetz/gruvbox'                    "  Nice colorscheme
 Plug 'kristijanhusak/vim-hybrid-material' "  Another one
 Plug 'eugen0329/vim-esearch'              "  Search all files with Ag
 Plug 'airblade/vim-gitgutter'             "  Git status by line
-Plug 'lambdalisue/vim-gita'               "  Ability to interact with git within nvim
+Plug 'lambdalisue/gina.vim'               "  Ability to interact with git within nvim
 Plug 'delimitMate.vim'                    "  Autocompletes parens, etc in insert mode like subl
 Plug 'terryma/vim-multiple-cursors'       "  Multiple cursors like Sublime
 Plug 'scrooloose/nerdcommenter'           "  Easier commenting/uncommenting
