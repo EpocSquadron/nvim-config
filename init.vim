@@ -145,11 +145,16 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Renamed"   : "",
     \ "Unmerged"  : "",
     \ "Deleted"   : "",
-    \ "Dirty"     : " ",
+    \ "Dirty"     : " ",
     \ "Clean"     : "",
     \ 'Ignored'   : '',
     \ "Unknown"   : ""
     \ }
+
+" add or override pattern matches for filetypes
+" these take precedence over the file extensions
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.gitlab-ci.yml'] = ''
 
 augroup nerdtree
 
