@@ -42,6 +42,12 @@ set background=dark " When set to "dark", Vim will try to use colors that look
 
 set inccommand=nosplit      " Preview the result of commands while typing them.
 
+set scrolloff=8             " Start scrolling when we're 8 lines away from margins
+
+set sidescrolloff=15
+
+set sidescroll=5
+
 " Change backup and swap dirs
 " So these files don't appear in
 " our project directories
