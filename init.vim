@@ -22,6 +22,8 @@ set showmatch       " When a bracket is inserted, briefly jump to the matching
                     " screen. The time to show the match can be set with
                     " 'matchtime'.
 
+set matchtime=1     " Feels painfully slow by default
+
 set ignorecase      " Ignore case in search patterns.
 
 set smartcase       " Override the 'ignorecase' option if the search pattern
