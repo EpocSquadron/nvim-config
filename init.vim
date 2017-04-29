@@ -15,8 +15,6 @@ set expandtab       " Use the appropriate number of spaces to insert a <Tab>.
                     " and when 'autoindent' is on. To insert a real tab when
                     " 'expandtab' is on, use CTRL-V <Tab>.
 
-set showcmd         " Show (partial) command in status line.
-
 set relativenumber  " Show line numbers.
 
 set showmatch       " When a bracket is inserted, briefly jump to the matching
