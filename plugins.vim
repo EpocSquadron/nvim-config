@@ -5,6 +5,7 @@ Plug 'vim-airline/vim-airline'            "  Native powerline-font status bar
 Plug 'scrooloose/nerdtree'                "  Togglable file explorer sidebar
 Plug 'simnalamburt/vim-mundo'             "  Interactive navigation of undo history
 Plug 'Xuyuanp/nerdtree-git-plugin'        "  Git status in nerdtree
+Plug 'jistr/vim-nerdtree-tabs'            "  Use a single nerdtree buffer across all tabs
 Plug 'ryanoasis/vim-devicons'             "  Nice filetype icons like in Atom
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " Colorized filetypes in nerdtree
 Plug 'morhetz/gruvbox'                    "  Nice colorscheme

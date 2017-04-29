@@ -130,13 +130,14 @@ let g:esearch = {
 "--------------- NerdTree -----------------"
 
 " Easier toggle for nerdtree
-nmap <Leader>t :NERDTreeToggle<cr>
+nmap <Leader>t :NERDTreeTabsToggle<cr>
 
 " Disable help text and bookmark title
 let g:NERDTreeMinimalUI = 1
 
 " Show hidden files in NERDTree
 let g:NERDTreeShowHidden = 1
+let g:NERDTreeWinSize = 38
 
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "",
@@ -156,19 +157,6 @@ let g:NERDTreeIndicatorMapCustom = {
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.gitlab-ci.yml'] = ''
 
-augroup nerdtree
-
-    " Clear previously applied autocmds
-    autocmd!
-
-    " Open nerdtree on starutp when no files specified
-    autocmd StdinReadPre * let s:std_in=1
-    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-    " Close nvim when the only window open is nerdtree
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-augroup END
 "---------------- Mappings -----------------"
 
 " easily access vimrc for editing in new tab
