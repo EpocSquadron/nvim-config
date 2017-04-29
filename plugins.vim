@@ -34,16 +34,8 @@ Plug 'w0rp/ale'                          " Automatic linting for many languages
 Plug 'junegunn/vim-slash'                " QoL improvements to search
 
 " ======= Syntax Highligters =========== "
-Plug 'othree/html5.vim'                  " HTML5
-Plug 'StanAngeloff/php.vim'              " PHP7
-Plug 'ekalinin/Dockerfile.vim'           " Dockerfile
-Plug 'pearofducks/ansible-vim'           " Ansible YAML
-Plug 'lumiliet/vim-twig'                 " Twig
-Plug 'rust-lang/rust.vim'                " Rust syntax, linting, and more
-Plug 'cespare/vim-toml'                  " Toml syntax highlighting
-Plug 'posva/vim-vue'                     " Vue.js syntax highlighting
+Plug 'sheerun/vim-polyglot'              " All the syntax highlighters we want
 Plug 'ap/vim-css-color'                  " Color preview for hex codes etc
-Plug 'tomlion/vim-solidity'              " Solidity ethereum lang syntax highlighting
 
 " Add plugins to &runtimepath
 call plug#end()
