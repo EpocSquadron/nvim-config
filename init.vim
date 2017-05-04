@@ -50,6 +50,8 @@ set sidescroll=5
 
 set cul                     " Highlight the current line
 
+set mouse=a          " No longer default, set it explicitely because we have a good terminal
+
 " Change backup and swap dirs
 " So these files don't appear in
 " our project directories
