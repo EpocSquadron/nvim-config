@@ -124,10 +124,12 @@ let g:tern#filetypes = [
 let g:esearch = {
   \ 'adapter':    'rg',
   \ 'backend':    'nvim',
-  \ 'out':        'win',
+  \ 'out':        'qflist',
   \ 'batch_size': 1000,
   \ 'use':        ['visual', 'hlsearch', 'last'],
   \}
+
+call esearch#map('<C-h>', 'esearch')
 
 "--------------- NerdTree -----------------"
 

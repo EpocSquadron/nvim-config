@@ -11,7 +11,7 @@ Plug 'ryanoasis/vim-devicons'             "  Nice filetype icons like in Atom
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " Colorized filetypes in nerdtree
 Plug 'morhetz/gruvbox'                    "  Nice colorscheme
 Plug 'kristijanhusak/vim-hybrid-material' "  Another one
-Plug 'eugen0329/vim-esearch'              "  Search all files with Ag
+Plug 'eugen0329/vim-esearch'              "  Search all files with rg
 Plug 'airblade/vim-gitgutter'             "  Git status by line
 Plug 'lambdalisue/gina.vim'               "  Ability to interact with git within nvim
 Plug 'delimitMate.vim'                    "  Autocompletes parens, etc in insert mode like subl
