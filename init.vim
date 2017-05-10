@@ -134,7 +134,7 @@ call esearch#map('<C-h>', 'esearch')
 "--------------- NerdTree -----------------"
 
 " Easier toggle for nerdtree
-nmap <Leader>t :NERDTreeTabsToggle<cr>
+nmap <Leader>t :NERDTreeMirrorToggle<cr>
 
 " Disable help text and bookmark title
 let g:NERDTreeMinimalUI = 1
