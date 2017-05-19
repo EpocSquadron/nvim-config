@@ -177,9 +177,6 @@ noremap <C-S-k> :m -2<CR>
 noremap <C-S-Down> :m +1<CR>
 noremap <C-S-j> :m +1<CR>
 
-" Easier tag searching
-nmap <Leader>f :tag<space>
-
 " Easy access to undotree
 nnoremap <Leader>u :MundoToggle<CR>
 
@@ -188,7 +185,6 @@ tnoremap <Leader><ESC> <C-\><C-n>
 tnoremap <C-j> <C-\><C-n><C-w><C-j>
 tnoremap <C-k> <C-\><C-n><C-w><C-k>
 tnoremap <C-l> <C-\><C-n><C-w><C-l>
-tnoremap <C-h> <C-\><C-n><C-w><C-h>
 
 " ----------- Distraction Free Mode ------- "
 
@@ -201,7 +197,6 @@ nmap <Leader>g :Goyo<CR>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
-nnoremap <C-h> <C-w><C-h>
 
 " Open new splits more naturally in bottom/right
 set splitbelow
