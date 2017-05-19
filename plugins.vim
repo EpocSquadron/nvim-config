@@ -14,7 +14,7 @@ Plug 'kristijanhusak/vim-hybrid-material' "  Another one
 Plug 'eugen0329/vim-esearch'              "  Search all files with rg
 Plug 'airblade/vim-gitgutter'             "  Git status by line
 Plug 'lambdalisue/gina.vim'               "  Ability to interact with git within nvim
-Plug 'delimitMate.vim'                    "  Autocompletes parens, etc in insert mode like subl
+Plug 'raimondi/delimitmate'               "  Autocompletes parens, etc in insert mode like subl
 Plug 'terryma/vim-multiple-cursors'       "  Multiple cursors like Sublime
 Plug 'scrooloose/nerdcommenter'           "  Easier commenting/uncommenting
 Plug 'shougo/deoplete.nvim'               "  Async autocompletion
