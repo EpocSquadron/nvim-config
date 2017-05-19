@@ -229,6 +229,10 @@ let g:multi_cursor_prev_key = '<C-N>'
 let g:multi_cursor_skip_key = '<C-x>'
 let g:multi_cursor_quit_key = '<Esc>'
 
+"------------ Multiple Cursors --------------"
+
+nmap <Leader>a :Autoformat<CR>
+
 " -------------- Startify -------------------"
 let g:startify_list_order = ['sessions', 'dir', 'bookmarks',
         \ 'files', 'commands']
