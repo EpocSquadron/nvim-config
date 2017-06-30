@@ -165,6 +165,12 @@ let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.gitlab-ci.yml'] = '
 
 "---------------- Mappings -----------------"
 
+" Easy sudo write when you forget to sudoedit
+cmap w!! w !sudo tee > /dev/null %
+
+" Easy reload of the file (discarding changes)
+nmap <Leader>r :e! %<cr>
+
 " easily access vimrc for editing in new tab
 nmap <Leader>ec :tabedit ~/.config/nvim/init.vim<cr>
 nmap <Leader>ep :tabedit ~/.config/nvim/plugins.vim<cr>
