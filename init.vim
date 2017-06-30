@@ -256,3 +256,6 @@ let g:ascii = [
 let g:startify_custom_header =
         \ 'map(startify#fortune#boxed() + g:ascii, "\"   \".v:val")'
 
+" -------------- Tagbar -------------------"
+
+nmap <Leader>i :TagbarToggle<CR>
