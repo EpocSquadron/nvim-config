@@ -213,8 +213,8 @@ augroup allthethings
     autocmd!
 
     " Automatically reload this file on save
-    autocmd BufWritePost init.vim source %
-    autocmd BufWritePost plugins.vim source %
+    autocmd BufWritePost init.vim source % | :AirlineRefresh
+    autocmd BufWritePost plugins.vim source % | :AirlineRefresh
 
     " Automatically enter insert mode when switching to a term pane
     autocmd BufEnter * if &buftype == 'terminal' | :startinsert | endif
