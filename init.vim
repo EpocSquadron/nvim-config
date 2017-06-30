@@ -232,10 +232,27 @@ let g:multi_cursor_prev_key = '<C-N>'
 let g:multi_cursor_skip_key = '<C-x>'
 let g:multi_cursor_quit_key = '<Esc>'
 
-"------------ Multiple Cursors --------------"
+"------------ Autoformat --------------"
 
 nmap <Leader>a :Autoformat<CR>
 
 " -------------- Startify -------------------"
 let g:startify_list_order = ['sessions', 'dir', 'bookmarks',
         \ 'files', 'commands']
+let g:ascii = [
+            \ "           .... ",
+            \ "         ,''. :   __ ",
+            \ "             \\|_.'  `:       _.----._//_ ",
+            \ "            .'  .'.`'-._   .'  _/ -._ \\)-.----O ",
+            \ "           '._.'.'      '--''-'._   '--..--'-` ",
+            \ "            .'.'___    /`'---'. / ,-'` ",
+            \ "snd       _<__.-._))../ /'----'/.'_____:'. ",
+            \ "   \_    :            \ ]              :  '. ",
+            \ "     \___:             \\              :    '. ",
+            \ "         :              \\__           :    .' ",
+            \ "         :_______________|__]__________:  .' ",
+            \ "                    .' __ '.           :.' "
+            \ ]
+let g:startify_custom_header =
+        \ 'map(startify#fortune#boxed() + g:ascii, "\"   \".v:val")'
+
