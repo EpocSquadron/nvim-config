@@ -188,18 +188,13 @@ noremap <C-S-j> :m +1<CR>
 " Easy access to undotree
 nnoremap <Leader>u :MundoToggle<CR>
 
+"------------ Split Management -------------"
+
 " Easier escaping from terminal mode
 tnoremap <Leader><ESC> <C-\><C-n>
 tnoremap <C-j> <C-\><C-n><C-w><C-j>
 tnoremap <C-k> <C-\><C-n><C-w><C-k>
 tnoremap <C-l> <C-\><C-n><C-w><C-l>
-
-" ----------- Distraction Free Mode ------- "
-
-" Easy access to Goyo
-nmap <Leader>g :Goyo<CR>
-
-"------------ Split Management -------------"
 
 " Remap Ctrl-w+h/j/k/l to Ctrl+h/j/k/l
 nnoremap <C-j> <C-w><C-j>
