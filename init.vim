@@ -65,7 +65,7 @@ set undofile
 set undodir=~/.config/nvim/undo
 
 " Use a more ergonomic leader for custom mappings
-let mapleader=';'
+let mapleader=' '
 
 "--------------- Theming -------------------"
 
