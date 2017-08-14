@@ -270,6 +270,12 @@ let g:ascii = [
 let g:startify_custom_header =
         \ 'map(startify#fortune#boxed() + g:ascii, "\"   \".v:val")'
 
+" Don't annoyingly cd to what I open..
+let g:startify_change_to_dir = 0
+
+" Use the session support.
+let g:startify_session_dir = "~/.config/nvim/session"
+
 " -------------- Tagbar -------------------"
 
 nmap <Leader>i :TagbarToggle<CR>
