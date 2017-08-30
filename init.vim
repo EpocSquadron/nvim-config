@@ -139,6 +139,10 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 " Supertab-like completion without all of supertab!
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
+" Racer specifics
+let g:deoplete#sources#rust#racer_binary='/home/epocsquadron/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/home/epocsquadron/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
+
 " Tern specifics
 let g:tern_request_timeout = 1
 let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete

@@ -22,6 +22,7 @@ Plug 'shougo/deoplete.nvim'               "  Async autocompletion
 Plug 'carlitux/deoplete-ternjs', {
             \ 'do': 'npm install -g tern'
             \ }
+Plug 'sebastianmarkow/deoplete-rust'     " Racer-based completions for deoplete
 Plug 'othree/jspc.vim'                   " JS parameter autocompletion
 Plug 'shougo/echodoc'                    " Show signatures of autocompletes
 Plug 'tpope/vim-surround'                " Easy manipulation of quotes, tags and other delimiters
