@@ -18,7 +18,7 @@ Plug 'lambdalisue/gina.vim'               "  Ability to interact with git within
 Plug 'raimondi/delimitmate'               "  Autocompletes parens, etc in insert mode like subl
 Plug 'Chiel92/vim-autoformat'             "  Hooks into various formatters, like atom-beautify
 Plug 'scrooloose/nerdcommenter'           "  Easier commenting/uncommenting
-Plug 'shougo/deoplete.nvim'               "  Async autocompletion
+Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }              "  Async autocompletion
 Plug 'carlitux/deoplete-ternjs', {
             \ 'do': 'npm install -g tern'
             \ }
