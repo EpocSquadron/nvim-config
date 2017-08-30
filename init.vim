@@ -229,6 +229,10 @@ noremap <C-S-j> :m +1<CR>
 " Easy access to undotree
 nnoremap <Leader>u :MundoToggle<CR>
 
+" Keep our visual mode selection when indenting
+vnoremap < <gv
+vnoremap > >gv
+
 "------------ Split Management -------------"
 
 " Easier escaping from terminal mode
