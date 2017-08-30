@@ -133,6 +133,13 @@ set fillchars+=vert:\
 " Start deoplete.
 let g:deoplete#enable_at_startup = 1
 
+" Prevent that pesky scratch window from sticking around
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
+" Supertab-like completion without all of supertab!
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" Tern specifics
 let g:tern_request_timeout = 1
 let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
 

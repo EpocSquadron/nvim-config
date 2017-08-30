@@ -23,7 +23,6 @@ Plug 'carlitux/deoplete-ternjs', {
             \ 'do': 'npm install -g tern'
             \ }
 Plug 'othree/jspc.vim'                   " JS parameter autocompletion
-Plug 'ervandew/supertab'                 " Use tab for autocomplete in insert mode
 Plug 'shougo/echodoc'                    " Show signatures of autocompletes
 Plug 'tpope/vim-surround'                " Easy manipulation of quotes, tags and other delimiters
 Plug 'godlygeek/tabular'                 " Align things around a delimiter, like = in a block of text
