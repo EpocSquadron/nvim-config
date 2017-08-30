@@ -133,8 +133,8 @@ set fillchars+=vert:\
 " Start deoplete.
 let g:deoplete#enable_at_startup = 1
 
-" Prevent that pesky scratch window from sticking around
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" Prevent that pesky scratch window from appearing
+set completeopt-=preview
 
 " Supertab-like completion without all of supertab!
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
