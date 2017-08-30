@@ -193,6 +193,10 @@ cmap w!! w !sudo tee > /dev/null %
 " Easy reload of the file (discarding changes)
 nmap <Leader>r :e! %<cr>
 
+" Make it easy to clear highlight when our plugin
+" for doing it automatically doesn't quite work.
+nmap <Leader><Leader> :nohlsearch<CR>
+
 " easily access vimrc for editing in new tab
 nmap <Leader>ec :tabedit ~/.config/nvim/init.vim<cr>
 nmap <Leader>ep :tabedit ~/.config/nvim/plugins.vim<cr>
