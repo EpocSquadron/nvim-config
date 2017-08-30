@@ -154,6 +154,11 @@ let g:tern#filetypes = [
                 \ 'vue',
                 \ ]
 
+" Padawan specifics
+" Easy way to generate padawan completion for the current project after making
+" changes
+command! -bang PadawanGenerate call deoplete#sources#padawan#Generate(<bang>0)
+
 "--------------- Esearch -----------------"
 
 let g:esearch = {
