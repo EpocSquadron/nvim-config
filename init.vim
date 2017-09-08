@@ -270,18 +270,6 @@ augroup allthethings
     autocmd BufEnter * if &buftype == 'terminal' | :startinsert | endif
 augroup END
 
-"------------ Multiple Cursors --------------"
-
-" Don't use the default mappings, they conflict
-" with CtrlP and such.
-let g:multi_cursor_use_default_mapping = 0
-
-" New mappings
-let g:multi_cursor_next_key = '<C-n>'
-let g:multi_cursor_prev_key = '<C-N>'
-let g:multi_cursor_skip_key = '<C-x>'
-let g:multi_cursor_quit_key = '<Esc>'
-
 "------------ Autoformat --------------"
 
 nmap <Leader>a :Autoformat<CR>
