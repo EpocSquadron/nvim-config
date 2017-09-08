@@ -233,6 +233,9 @@ nnoremap <Leader>u :MundoToggle<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+" Make it easy to copy the whole buffer
+nnoremap <Leader>y :%y+<CR>
+
 "------------ Split Management -------------"
 
 " Easier escaping from terminal mode
