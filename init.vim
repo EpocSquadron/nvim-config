@@ -158,6 +158,16 @@ let g:tern#filetypes = [
 " changes
 command! -bang PadawanGenerate call deoplete#sources#padawan#Generate(<bang>0)
 
+" Make sure we use the right sources for our file types
+let g:deoplete#omni#functions = {}
+let g:deoplete#omni#functions.javascript = [
+  \ 'tern#Complete',
+  \ 'jspc#omni'
+\]
+
+" let g:deoplete#sources = {}
+" let g:deoplete#sources['javascript'] = ['file', 'ternjs']
+" let g:deoplete#sources['javascript.jsx'] = ['file', 'ternjs']
 "--------------- Esearch -----------------"
 
 let g:esearch = {
