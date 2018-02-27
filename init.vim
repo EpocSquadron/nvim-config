@@ -130,57 +130,24 @@ set listchars=space:·,tab:\|\ ,eol:¬
 " Nicer vertical separator
 set fillchars+=vert:\ 
 
-"--------------- Deoplete ----------------"
+"--------------- CtrlSF ------------------"
 
-" Start deoplete.
-let g:deoplete#enable_at_startup = 1
+" Search using regex by default
+let g:ctrlsf_regex_pattern = 1
 
-" Prevent that pesky scratch window from appearing
-set completeopt-=preview
+nmap <c-h> <Plug>CtrlSFPrompt
 
-" Supertab-like completion without all of supertab!
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+"--------------- Picker ------------------"
 
-" Racer specifics
-let g:deoplete#sources#rust#racer_binary='/home/epocsquadron/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='/home/epocsquadron/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
-
-" Tern specifics
-let g:tern_request_timeout = 1
-
-"Add extra filetypes
-let g:tern#filetypes = [
-                \ 'jsx',
-                \ 'javascript.jsx',
-                \ 'vue',
-                \ ]
-
-" Padawan specifics
-" Easy way to generate padawan completion for the current project after making
-" changes
-command! -bang PadawanGenerate call deoplete#sources#padawan#Generate(<bang>0)
-
-" Make sure we use the right sources for our file types
-let g:deoplete#omni#functions = {}
-let g:deoplete#omni#functions.javascript = [
-  \ 'tern#Complete',
-  \ 'jspc#omni'
-\]
-
-" let g:deoplete#sources = {}
-" let g:deoplete#sources['javascript'] = ['file', 'ternjs']
-" let g:deoplete#sources['javascript.jsx'] = ['file', 'ternjs']
-"--------------- Esearch -----------------"
-
-let g:esearch = {
-  \ 'adapter':    'rg',
-  \ 'backend':    'nvim',
-  \ 'out':        'qflist',
-  \ 'batch_size': 1000,
-  \ 'use':        ['visual', 'hlsearch', 'last'],
-  \}
-
-call esearch#map('<C-h>', 'esearch')
+nmap <unique> <c-p>e <Plug>PickerEdit
+nmap <unique> <c-p>s <Plug>PickerSplit
+nmap <unique> <c-p>t <Plug>PickerTabedit
+nmap <unique> <c-p>v <Plug>PickerVsplit
+nmap <unique> <c-p>b <Plug>PickerBuffer
+nmap <unique> <c-p>] <Plug>PickerTag
+nmap <unique> <c-p>w <Plug>PickerStag
+nmap <unique> <c-p>o <Plug>PickerBufferTag
+nmap <unique> <c-p>h <Plug>PickerHelp
 
 "--------------- NerdTree -----------------"
 
@@ -228,10 +195,6 @@ nmap <Leader><Leader> :nohlsearch<CR>
 " easily access vimrc for editing in new tab
 nmap <Leader>ec :tabedit ~/.config/nvim/init.vim<cr>
 nmap <Leader>ep :tabedit ~/.config/nvim/plugins.vim<cr>
-
-" Map our muscle memory finding things to fzy
-nnoremap <C-p> :FuzzyOpen<CR>
-nnoremap <C-r> :FuzzyGrep<CR>
 
 " Move the current line up and down like in subl/atom
 noremap <C-S-Up> :m -2<CR>
@@ -301,6 +264,66 @@ let g:startify_change_to_dir = 0
 " Use the session support.
 let g:startify_session_dir = "~/.config/nvim/session"
 
-" -------------- Tagbar -------------------"
+" -------------- Asyncomplete ---------------- "
 
-nmap <Leader>i :TagbarToggle<CR>
+" Prevent that pesky scratch window from appearing
+set completeopt-=preview
+
+" Supertab-like completion without all of supertab!
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-Tab>"
+
+let g:asyncomplete_remove_duplicates = 1
+
+" Registering buffer completer
+call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+    \ 'name': 'buffer',
+    \ 'whitelist': ['*'],
+    \ 'blacklist': ['go'],
+    \ 'priority': 12,
+    \ 'completor': function('asyncomplete#sources#buffer#completor'),
+    \ }))
+
+" Registering file/directory completer
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
+    \ 'name': 'file',
+    \ 'whitelist': ['*'],
+    \ 'priority': 10,
+    \ 'completor': function('asyncomplete#sources#file#completor')
+    \ }))
+
+" Registering flow for javascript
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#flow#get_source_options({
+    \ 'name': 'flow',
+    \ 'whitelist': ['javascript'],
+    \ 'completor': function('asyncomplete#sources#flow#completor'),
+    \ 'config': {
+    \    'prefer_local': 1,
+    \    'show_typeinfo': 1
+    \  },
+    \ }))
+
+" Registering php language server protocol
+au User lsp_setup call lsp#register_server({                                    
+     \ 'name': 'php-language-server',                                            
+     \ 'cmd': {server_info->['php', expand('~/.config/nvim/plugged/php-language-server/bin/php-language-server.php')]},
+     \ 'whitelist': ['php'],                                                     
+     \ })
+
+" Registering css/sass language server protocol
+" Requires external program vscode-css-languageserver-bin
+if executable('css-languageserver')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'css-languageserver',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
+        \ 'whitelist': ['css', 'less', 'sass'],
+        \ })
+endif
+
+" -------------- Fuzzy Finder ---------------- "
+let g:picker_find_executable = 'rg'
+let g:picker_find_flags = '--color never --files'
+
+let g:picker_selector_executable = 'sk'
+let g:picker_selector_flags = ''
+
