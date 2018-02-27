@@ -192,6 +192,7 @@ let g:NERDTreeMinimalUI = 1
 
 " Show hidden files in NERDTree
 let g:NERDTreeShowHidden = 1
+let g:NERDTreeSortHiddenFirst = 1
 let g:NERDTreeWinSize = 38
 
 let g:NERDTreeIndicatorMapCustom = {
