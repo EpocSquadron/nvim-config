@@ -54,6 +54,8 @@ set mouse=a          " No longer default, set it explicitely because we have a g
 
 set switchbuf+=usetab,newtab   " Prevent replacing the current buffer with quickfix and :b commands
 
+set hidden           " Don't ask to save when replacing a buffer, just put it in the background
+
 " Change backup and swap dirs
 " So these files don't appear in
 " our project directories
