@@ -139,15 +139,15 @@ nmap <c-h> <Plug>CtrlSFPrompt
 
 "--------------- Picker ------------------"
 
-nmap <unique> <c-p>e <Plug>PickerEdit
-nmap <unique> <c-p>s <Plug>PickerSplit
-nmap <unique> <c-p>t <Plug>PickerTabedit
-nmap <unique> <c-p>v <Plug>PickerVsplit
-nmap <unique> <c-p>b <Plug>PickerBuffer
-nmap <unique> <c-p>] <Plug>PickerTag
-nmap <unique> <c-p>w <Plug>PickerStag
-nmap <unique> <c-p>o <Plug>PickerBufferTag
-nmap <unique> <c-p>h <Plug>PickerHelp
+nmap <unique> <c-p>e <Plug>(PickerEdit)
+nmap <unique> <c-p>s <Plug>(PickerSplit)
+nmap <unique> <c-p>t <Plug>(PickerTabedit)
+nmap <unique> <c-p>v <Plug>(PickerVsplit)
+nmap <unique> <c-p>b <Plug>(PickerBuffer)
+nmap <unique> <c-p>] <Plug>(PickerTag)
+nmap <unique> <c-p>w <Plug>(PickerStag)
+nmap <unique> <c-p>o <Plug>(PickerBufferTag)
+nmap <unique> <c-p>h <Plug>(PickerHelp)
 
 "--------------- NerdTree -----------------"
 
